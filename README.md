@@ -1,8 +1,8 @@
-# Airline Market Analytics
+Airline Market Analytics
 
 A Flask web application that scrapes airline booking data, processes it with AI insights, and provides interactive visualizations of market demand trends.
 
-## Features
+Features
 
 - **Data Scraping**: Automated collection of airline pricing data from multiple sources
 - **AI Analysis**: OpenAI-powered insights for market trends and demand patterns
@@ -10,7 +10,7 @@ A Flask web application that scrapes airline booking data, processes it with AI 
 - **Data Filtering**: Advanced search and filtering capabilities
 - **Market Insights**: AI-generated analysis of popular routes, price trends, and demand
 
-## Installation
+Installation
 
 1. Clone or extract the project files
 2. Install dependencies:
@@ -35,14 +35,14 @@ A Flask web application that scrapes airline booking data, processes it with AI 
    python main.py
    ```
 
-## Usage
+Usage
 
 1. **Dashboard**: View overview of flight data, charts, and statistics
 2. **Data Scraping**: Click "Scrape Data" to collect new flight information
 3. **AI Insights**: Generate AI-powered market analysis
 4. **Filtering**: Use the filter form to search for specific routes or airlines
 
-## Project Structure
+Project Structure
 
 - `app.py`: Main Flask application setup
 - `main.py`: Application entry point
@@ -55,19 +55,19 @@ A Flask web application that scrapes airline booking data, processes it with AI 
 - `static/`: CSS and JavaScript files
 - `instance/`: Database files
 
-## Configuration
+Configuration
 
-### Environment Variables
+Environment Variables
 
-- `OPENAI_API_KEY`: Your OpenAI API key for AI insights
+- `Gemini AI`: Your OpenAI API key for AI insights
 - `SESSION_SECRET`: Flask session secret key
 - `DATABASE_URL`: Database connection string (default: SQLite)
 
-### Database
+Database
 
 The application uses SQLite by default. For production, you can use PostgreSQL by setting the `DATABASE_URL` environment variable.
 
-## API Endpoints
+API Endpoints
 
 - `GET /`: Main dashboard
 - `POST /scrape-data`: Trigger data scraping
@@ -76,7 +76,7 @@ The application uses SQLite by default. For production, you can use PostgreSQL b
 - `GET /api/chart-data/<chart_type>`: Chart data API
 - `GET /api/filter-data`: Filter flight data
 
-## Dependencies
+Dependencies
 
 - Flask 3.0.0
 - Flask-SQLAlchemy 3.1.1
@@ -86,6 +86,9 @@ The application uses SQLite by default. For production, you can use PostgreSQL b
 - Trafilatura 1.12.2
 - Gunicorn 21.2.0
 
-## License
+License
 
 This project is for educational and demonstration purposes.
+
+
+
