@@ -1,68 +1,91 @@
+# Airline Market Analytics
 
-✈️ Airline Market Demand Dashboard
+A Flask web application that scrapes airline booking data, processes it with AI insights, and provides interactive visualizations of market demand trends.
 
-A full-stack Flask web application to analyze and visualize real-time airline booking data using the AviationStack API. The dashboard allows users to filter by route and date, see booking trends, export data, and optionally generate AI-powered insights.
+## Features
 
-> 🔗 Live Demo**: [https://ca3917a8-6919-4788-9911-1f80c248852b-00-1x9zbhfsxa78j.picard.replit.dev/]  
+- **Data Scraping**: Automated collection of airline pricing data from multiple sources
+- **AI Analysis**: OpenAI-powered insights for market trends and demand patterns
+- **Interactive Dashboard**: Real-time charts and data visualization
+- **Data Filtering**: Advanced search and filtering capabilities
+- **Market Insights**: AI-generated analysis of popular routes, price trends, and demand
 
----
+## Installation
 
-📊 Features
+1. Clone or extract the project files
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-- 🔍 Real-Time Data** via AviationStack API
-- 🎛️ Interactive Filters** (Source, Destination, Date)
-- 📈 Visual Charts** (Popular Routes and Price Trends using Chart.js)
-- 📥 CSV Export** for filtered flight data
-- 🔐 Login Authentication** (Demo: `admin` / `pass123`)
-- ⚡ Flask-Caching** to optimize API calls
-- 🧠 AI Insights Placeholder** (supports integration with OpenAI API)
+3. Set up environment variables:
+   ```bash
+   export OPENAI_API_KEY="your_openai_api_key"
+   export SESSION_SECRET="your_session_secret"
+   export DATABASE_URL="sqlite:///instance/airline_data.db"
+   ```
 
----
+4. Initialize the database:
+   ```bash
+   python populate_sample_data.py
+   ```
 
-🖼️ Screenshots
+5. Run the application:
+   ```bash
+   python main.py
+   ```
 
-<<img width="1710" height="977" alt="image" src="https://github.com/user-attachments/assets/c974f3a3-ac00-4add-acf5-e4b337a429ef" />
+## Usage
 
+1. **Dashboard**: View overview of flight data, charts, and statistics
+2. **Data Scraping**: Click "Scrape Data" to collect new flight information
+3. **AI Insights**: Generate AI-powered market analysis
+4. **Filtering**: Use the filter form to search for specific routes or airlines
 
+## Project Structure
 
----
+- `app.py`: Main Flask application setup
+- `main.py`: Application entry point
+- `models.py`: Database models
+- `routes.py`: Flask routes and API endpoints
+- `data_scraper.py`: Web scraping functionality
+- `ai_analyzer.py`: OpenAI integration for insights
+- `data_processor.py`: Data processing utilities
+- `templates/`: HTML templates
+- `static/`: CSS and JavaScript files
+- `instance/`: Database files
 
-🧰 Tech Stack
+## Configuration
 
-| Category       | Tools Used                      |
-|----------------|----------------------------------|
-| Backend        | Python, Flask                   |
-| Frontend       | HTML, Bootstrap 5, Chart.js     |
-| Data Layer     | Pandas                          |
-| External APIs  | AviationStack API               |
-| Hosting        | Replit                          |
-| Auth           | Basic Login (in-memory)         |
-| Extras         | Flask-Caching, CSV Export       |
+### Environment Variables
 
----
+- `OPENAI_API_KEY`: Your OpenAI API key for AI insights
+- `SESSION_SECRET`: Flask session secret key
+- `DATABASE_URL`: Database connection string (default: SQLite)
 
-⚙️ Setup Instructions(If one has to Setup on His/Her own pc)
-1. Clone the Repository
-     '''bash
-     git clone https://github.com/yourusername/airline-market-demand-app.git
-     cd airline-market-demand-app
+### Database
 
-2. Create Virtual Environment
-    python -m venv venv
-    source venv/bin/activate  # On Windows: venv\\Scripts\\activate
+The application uses SQLite by default. For production, you can use PostgreSQL by setting the `DATABASE_URL` environment variable.
 
-3. Install Dependencies
-   
-4. Configure API Key
-    Create a .env file in the project root:
-    AVIATIONSTACK_API_KEY=your_api_key_here
+## API Endpoints
 
-5. Run the App
-   python app.py
+- `GET /`: Main dashboard
+- `POST /scrape-data`: Trigger data scraping
+- `POST /generate-insights`: Generate AI insights
+- `GET /insights`: View AI insights
+- `GET /api/chart-data/<chart_type>`: Chart data API
+- `GET /api/filter-data`: Filter flight data
 
+## Dependencies
 
-🔐 Login Credentials (Demo)
-	•	Username: admin
-	•	Password: pass123
+- Flask 3.0.0
+- Flask-SQLAlchemy 3.1.1
+- OpenAI 1.51.2
+- Requests 2.31.0
+- BeautifulSoup4 4.12.2
+- Trafilatura 1.12.2
+- Gunicorn 21.2.0
 
+## License
 
+This project is for educational and demonstration purposes.
